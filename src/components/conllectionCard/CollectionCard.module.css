@@ -1,0 +1,55 @@
+.shopImg>img{
+    height: 250px;
+    max-width: 300px;
+   
+}
+.collection{
+    background-color:rgba(128, 128, 128, 0.1);
+    
+}
+#svg{
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    
+}
+.shopImg{
+    position: relative;
+}
+.showBtn, #title{
+   width: 100%;
+   margin-inline: auto;
+}
+#title{
+color: rgba(255, 0, 0, 1);
+font-weight: bolder;
+}
+.btnAndTitle{
+    top: 40%;
+    left: 2%;
+    transform: translateY(-60%);
+    position: absolute;
+    z-index: 1;
+    display: grid;
+  
+}
+.showBtn > button{
+    background: none;
+    outline: none;
+    border: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+    cursor: pointer;
+   
+}
+#arrow{
+   color: lime;
+}
+#shopNowText{
+    
+    height: fit-content;
+    font-size: 15px;
+    color:lightskyblue;
+    font-weight: 500;
+}

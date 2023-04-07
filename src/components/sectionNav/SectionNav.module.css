@@ -1,0 +1,11 @@
+/* primari color #181b29 */
+/* secondary color #54595f */
+.sectionNavList{
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+.sectionNavList>li>a{
+    text-decoration: none;
+    color: #181b29;
+}

@@ -1,0 +1,120 @@
+/* primari color #181b29 */
+/* secondary color #54595f */
+.product{
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    height: fit-content;
+    width: 250px;
+    overflow: hidden;
+    
+}
+button, h1, h2, h3, h4{
+    margin: 0px;
+    padding: 0px;
+}
+.productImgContainer{
+    position: relative;
+}
+.productImgContainer>img{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(128, 128, 128, 0.15);
+    
+}
+
+.prices{
+    display: grid;
+    grid-auto-flow: column;
+    height: fit-content;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: .5em;
+    
+}
+.productOldPrice, .productNewPrice{
+    height: fit-content;
+    margin: 0px;
+    padding: 0px;
+
+}
+.productOldPrice{
+    color: rgba(24, 27, 41, 0.7);
+}
+.wishListAndQuickViewBtn{
+    display: grid;
+    grid-auto-flow: column;
+    
+}
+
+.wishListAndQuickViewBtn>*{
+    width: 100%;
+    text-align: center;
+    border: none;
+   
+}
+.addToCartBtnCnt{
+    
+}
+.addToCartBtn{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    background: #181b29;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+
+}
+
+.discount,.classification{
+    background-color: red;
+    width: 50px;
+    color: white;
+    position: absolute;
+    
+}
+.discount{
+    top: 10px;
+    left: 10px;
+}
+.classification{
+    top: 10px;
+    right: 10px;
+}
+#productCat {
+    color: rgba(24, 27, 41, 0.7);
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: .5em;
+}
+#productName>a{
+    color: #181b29;
+    text-decoration: none;
+    font-size: 20px;
+}
+#productName{
+    margin-bottom: .5em;
+}
+.addToWishListAndQuickViewText{
+    padding: 0px;
+    margin: 0px;
+}
+.addToWishList , .quickViewBtn{
+    background-color: rgba(0, 0, 255, 0.7);
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.addToWishList:hover , .quickViewBtn:hover{
+    background-color: #FC2947;
+    
+}
+.addToCartBtn:hover{
+    background-color: #FC2947;
+   
+}
+.productRatingCtn{
+    margin-bottom: .5em;
+    color: #181b29;
+}

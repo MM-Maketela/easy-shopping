@@ -1,0 +1,29 @@
+#Navigation{
+   
+    height:3.4em;
+    position: relative;
+    box-shadow: 3px 3px rgba(24, 27, 41, 0.2);
+    padding: 0px;
+    margin-bottom: 4em;
+}
+#navItems{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    width: 85%;
+    margin-inline: auto;
+}
+
+#item{
+    text-decoration: none;
+    color: #181b29;
+}
+#navItemContainer{
+
+    width:100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
