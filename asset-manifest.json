@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.27912591.css",
+    "main.js": "/static/js/main.5be7a762.js",
+    "static/js/787.414155ca.chunk.js": "/static/js/787.414155ca.chunk.js",
+    "static/media/product01.png": "/static/media/product01.4097d193ebafa2528ebe.png",
+    "static/media/shop02.png": "/static/media/shop02.7b1908f1f1e3e3bc9511.png",
+    "static/media/product03.png": "/static/media/product03.9efd2f214a2a8d87f56e.png",
+    "static/media/product08.png": "/static/media/product08.8f0b671510063c87da0e.png",
+    "static/media/product06.png": "/static/media/product06.61d4d19ccbea0205c35b.png",
+    "static/media/shop03.png": "/static/media/shop03.4d96b54da46cb61ca05b.png",
+    "static/media/product09.png": "/static/media/product09.c8102ebcbaecada2a3dc.png",
+    "static/media/product04.png": "/static/media/product04.f70b9f51cd273e0bc163.png",
+    "static/media/product02.png": "/static/media/product02.70190c900db40dafff95.png",
+    "static/media/shop01.png": "/static/media/shop01.8467d4e575c3eee9afb3.png",
+    "static/media/product07.png": "/static/media/product07.7498c0286c7acfa6ce2c.png",
+    "static/media/product05.png": "/static/media/product05.a891f64820918906f0d4.png",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/index.html",
+    "main.27912591.css.map": "/static/css/main.27912591.css.map",
+    "main.5be7a762.js.map": "/static/js/main.5be7a762.js.map",
+    "787.414155ca.chunk.js.map": "/static/js/787.414155ca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27912591.css",
+    "static/js/main.5be7a762.js"
+  ]
+}
