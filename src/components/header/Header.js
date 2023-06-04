@@ -1,24 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import product01 from '../../assets/images/product01.png'
 import product02 from '../../assets/images/product02.png'
 import {Logo}  from '../logo/Logo'
 import classes from './Header.module.css'
 import { Link } from 'react-router-dom'
 import {AiOutlineShoppingCart,AiOutlineHeart} from 'react-icons/ai/index.esm'
+import {Navigation} from '../navigation/Navigation'
+import { Cart } from '../cart/Cart'
 const iconSize = 25;
 export const Header = () => {
+
+	const [cartIsOpen, setCartIsOpen] = useState(false);
   return (
     <header>
 			<div id={classes.topHeader}>
 				<div className={classes.container}>
 					<ul className={[classes.topHeaderLinks,classes.ul, classes.list].join(" ")}>
-						<li><a  href="#" id={classes.listItem}>+021-95-51-84</a></li>
-						<li><a href="#" id={classes.listItem}> easyshopping@email.com</a></li>
-						<li><a href="#" id={classes.listItem}> 1734 Stonecoal Road</a></li>
+						<li><Link  to="/" id={classes.listItem}>+021-95-51-84</Link></li>
+						<li><Link to="/" id={classes.listItem}> easyshopping@email.com</Link></li>
+						<li><Link to="/" id={classes.listItem}> 1734 Stonecoal Road</Link></li>
 					</ul>
 					<ul className={[classes.ul,classes.list].join(" ")}>
-						<li><a href="#" id={classes.listItem}>ZAR</a></li>
-						<li><a href="#" id={classes.listItem}>My Account</a></li>
+						<li><Link to="/checkout" id={classes.listItem}>ZAR</Link></li>
+						<li><Link to="/myProfile" id={classes.listItem}>My Account</Link></li>
 					</ul>
 				</div>
 			</div>
@@ -57,13 +61,14 @@ export const Header = () => {
 								</div>
 
 								<div className={classes.cartContainer}>
-										<div id={classes.cart}>
-										<AiOutlineShoppingCart size={iconSize} />
+										<div  id={classes.cart}>
+											<AiOutlineShoppingCart size={iconSize} onClick={()=>{ setCartIsOpen(!cartIsOpen)}} id={ classes.cartIconId}/>
+											<div className={ cartIsOpen ? classes.cartOpen: classes.cartClosed}><Cart/></div>
 										</div>
-										<div className={classes.cartMessage}>Your Cart</div>
+										<div className={classes.cartMessage}>Your Cart
+							
+										</div>
 										
-									
-									
 								</div>
 								
 								
@@ -74,7 +79,8 @@ export const Header = () => {
 						<div id={classes.wishlistCount}><div id={classes.wishlistQty}>3</div></div> */}
 					</div>
 				</div>
-			</div>
+			</div >
+			<div id={classes.nav}><Navigation/></div>
 		</header>
   )
 }

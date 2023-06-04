@@ -1,0 +1,66 @@
+#sideBar{
+    contain: content;
+    overflow: hidden;
+}
+.innerCategoryContainer{
+    display: grid;
+    gap: 1em;
+    font-size:12px;
+    margin-block: 2em;
+}
+.innerCategoryContainer>*{
+   
+}
+.priceAdjuster{
+    margin-top: .5em;
+    display:    grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: .5em;
+    width: fit-content;
+    margin-left:.3em;
+}
+
+.inputNumber > input{
+    width: 5em;
+  height: 2.7em;
+}
+
+#priceDivider{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.dividerContainer{
+    position: relative;
+  
+}
+.inputAndSignsContainer{
+    display: grid;
+    grid-auto-flow: column;
+}
+#signs{
+    display: grid;
+    text-align: center;
+    
+}
+#signs>*{
+    
+      
+}
+#signs>div>div{
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid rgba(24, 27, 41, 0.7);
+ 
+    padding-inline: 2px;
+}
+#signs>div>div>*{
+    height: .7em;
+}
+#signs>div>div:hover{
+    cursor: pointer;
+    background-color: rgba(24, 27, 41);
+    color: white;
+}

@@ -1,0 +1,130 @@
+.outerContainer{
+    color: rgba(24, 27, 41,1);
+    
+}
+
+.checkoutContainer{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 1em;
+    margin-top: 3em;
+    width: 85%;
+    margin-inline: auto;
+    position: relative;
+}
+.inputList{
+    display: grid;
+    gap: .7em;
+    padding: 0px;
+    margin: 0px;
+    margin-block: 2em;
+}
+#input{
+    width: 99%;
+    /* to keep input from overflow */
+    box-sizing:border-box;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    border: 1px solid rgba(24, 27, 41, 0.3);
+    height: 3em;
+    padding-inline: 1em;
+
+}
+#input:focus, #textarea:focus{
+    outline: none;
+    border-width: 2px;
+}
+#li{
+    padding: 0px;
+    margin: 0px;
+    color: rgba(24, 27, 41, 0.8);
+}
+.paymentMethod{
+    border: 2px solid rgba(24, 27, 41, 0.3);
+   height: fit-content;
+    display: grid;
+}
+
+#orderHeader{
+    text-align: center;
+}
+#billingHeader, #orderHeader{
+    margin-top: 1em;
+}
+#checkoutHeader{
+    padding-block: 1.2em;
+    width: 85%;
+    margin-inline: auto;
+}
+.border{
+    box-shadow: 2px 2px rgba(24, 27, 41, 0.2);
+}
+.billingInfo{
+    contain: content;
+}
+#checkbox{
+    margin-left: 0px;
+}
+#textarea{
+width: 100%;
+box-sizing:border-box;
+border: 1px solid rgba(24, 27, 41, 0.3);
+padding: 1em;
+resize: none;
+margin-top: 1em;
+height: 10em;
+}
+#orderDetails{
+   
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+   
+}
+#nthChild{
+    text-align: end;
+}
+#orderDetails>*{
+    padding: 0px;
+    margin: 0px;
+}
+#paymentList{
+    display: grid;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 1em;
+    gap: .5em;
+}
+#radio{
+    margin: 0px;
+    padding: 0px;
+    margin-right: 2px;
+
+}
+.terms{
+    margin-top: 1em;
+}
+#placeOrderBtn{
+    margin-block: 1em;
+    width: 100%;
+    padding-block: 1em;
+    font-weight: bold;
+    background-color: rgba(0, 0, 255, 0.9);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.placeOrderBtn{
+    margin-block: 1em;
+    width: 60%;
+    margin-inline: auto;
+}
+.color{
+    color: rgba(24, 27, 41, 0.8);
+}

@@ -33,14 +33,14 @@ font-weight: bolder;
     display: grid;
   
 }
-.showBtn > button{
-    background: none;
-    outline: none;
-    border: none;
+#Btn{
+    text-decoration: none;
     display: grid;
     grid-auto-flow: column;
-    gap: 1em;
     cursor: pointer;
+    margin-block: .5em;
+    gap: .5em;
+    justify-content: start;
    
 }
 #arrow{

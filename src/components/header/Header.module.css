@@ -92,6 +92,7 @@ header{
 #cart, .cartMessage, #wishlistIcon{
     margin-inline:auto;
     width: fit-content;
+    position: relative;
 }
 #cartItemCount{
     position: absolute;
@@ -124,5 +125,35 @@ header{
 .wishListMessage{
     
     width: max-content;
-    
+}
+/* managing cart and wish list menu */
+#cartIconId{
+    cursor: pointer;
+}
+.headerCartWishlistCtnContainer{
+}
+#nav{
+    color: black;
+}
+
+#cart{
+   position: relative;
+}
+
+.cartClosed, .cartOpen{
+    transition: opacity 500ms ease-in-out, transform 400ms ease-in-out;
+
+}
+.cartClosed{
+    opacity: 0;
+    width: max-content;
+    pointer-events: none;
+
+}
+
+
+.cartOpen{
+    opacity: 1;
+    pointer-events: auto;
+   
 }

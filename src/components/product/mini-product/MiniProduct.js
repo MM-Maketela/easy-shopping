@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classes from "./MiniProduct.module.css"
+import { Link } from 'react-router-dom'
 const MiniProduct = props => {
     const {image, newPrice, name,oldPrice, category}=props;
   return (
@@ -10,7 +11,7 @@ const MiniProduct = props => {
         </div>
         <div className={classes.productDesc}>
             <p className={classes.productCat}>{category}</p>
-            <h3 className={classes.productName}><a href="#">{name}</a></h3>
+            <h3 className={classes.productName}><Link to="/easy-shopping/productDisplay">{name}</Link></h3>
             <div className={classes.productPrices}>
               <div className={classes.productPrice} >R{newPrice}</div>
             <del className={classes.productOldPrice}>R{oldPrice}</del>

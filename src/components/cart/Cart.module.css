@@ -1,0 +1,36 @@
+#cart{
+    z-index: 1000;
+    top: calc(0%);
+    right: calc(100% + 1rem);
+    position: absolute;
+    min-width: 30rem;
+    max-width: fit-content;
+    background-color: white;
+    box-sizing: border-box;
+    color: rgba(24, 27, 41, 1);
+    text-align: center;
+    padding-block: 1rem;
+    box-shadow:  1px 1px 20px 3px grey;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+#buy{
+    width: 80%;
+    padding-block: .5em;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border: 4px solid red;
+    border-radius: 5px;
+    
+}
+#buy:hover{
+    color: red;
+    background-color: white;
+}
+.itemListGrid{
+    min-height: 20rem;
+}

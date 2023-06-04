@@ -17,7 +17,6 @@ import MacroProduct from '../../components/product/macro-product/MacroProduct'
 import Slider from '../../components/slider/Slider'
 import MiniProduct from '../../components/product/mini-product/MiniProduct'
 import MiniSlider from '../../components/miniSlider/MiniSlider'
-import {AiOutlineFacebook, AiOutlineTwitter, AiOutlineInstagram, AiOutlineLinkedin,AiOutlineMail} from 'react-icons/ai/index.esm'
 import {Navigation} from '../../components/navigation/Navigation'
 import CollectionCard from '../../components/conllectionCard/CollectionCard'
 import { SectionNav } from '../../components/sectionNav/SectionNav'
@@ -27,11 +26,11 @@ import {FaFacebookF} from 'react-icons/fa/index.esm'
 export const Store = () => {
 
 
-	const sizeOfSocialMediaIcon = 15;
+
   return (
     <div id={classes.store} >
 		
-			<Navigation/>
+			
         <div className={classes.section}>
 			<div className={classes.container}>
 				<div className={classes.row}>
@@ -350,42 +349,6 @@ export const Store = () => {
 			</div>
 		</div>
 
-		<div id="newsletter" className="section">
-			<div >
-				<div>
-					<div className={classes.newsLetterContainer}>
-						<div className={classes.newsLetter}>
-							<p>Sign Up for the <strong>NEWSLETTER</strong></p>
-							<form className={classes.form}>
-								<div>
-								<input className={classes.userInput} type="email" placeholder="Enter Your Email"/>
-								</div>
-
-								<div className={classes.submitBtnCtn}>
-								<button className={classes.submitBtn}>
-									<div><div><AiOutlineMail size={15}/></div> <div>Subscribe</div></div>
-									</button>
-								</div>
-							</form>
-							<ul className={classes.socialMediaFollow}>
-								<li>
-									<a href="#"><FaFacebookF size={sizeOfSocialMediaIcon} id={classes.smIconId}/></a>
-								</li>
-								<li>
-									<a href='#'> <AiOutlineTwitter size={sizeOfSocialMediaIcon} id={classes.smIconId}/></a>
-								</li>
-								<li>
-									<a href="#">< AiOutlineInstagram size={sizeOfSocialMediaIcon} id={classes.smIconId}/></a>
-								</li>
-								<li>
-									<a href="#"><AiOutlineLinkedin size={sizeOfSocialMediaIcon} id={classes.smIconId}/></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
     </div>
   )
 }

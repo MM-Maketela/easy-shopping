@@ -1,6 +1,10 @@
 import React from 'react'
 import classes from './Footer.module.css'
+import { Link } from 'react-router-dom'
+import {MdLocationPin,MdLocalPhone,MdEmail} from 'react-icons/md/index.esm'
+
 export const Footer = () => {
+	const iconSize = 15;
   return (
     <footer id={classes.footer}>
 			<div className={classes.section}>
@@ -11,9 +15,9 @@ export const Footer = () => {
 								<h3 className={classes.footerTitle}>About Us</h3>
 								<p>test ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
 								<ul className={classes.footerLinks}>
-									<li><a href="#"><i className="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-									<li><a href="#"><i className="fa fa-phone"></i>+021-95-51-84</a></li>
-									<li><a href="#"><i className="fa fa-envelope-o"></i>email@email.com</a></li>
+									<li ><Link to="/" id={classes.listItem}><MdLocationPin  size={iconSize} color={"blue"} id={classes.footerIcon}/> <div id={classes.footerText}>1734 Stonecoal Road</div></Link></li>
+									<li ><Link to="/" id={classes.listItem}><MdLocalPhone  size={iconSize} color={"blue"} id={classes.footerIcon}/><div id={classes.footerText}>+021-95-51-84</div></Link></li>
+									<li ><Link to="/" id={classes.listItem}><MdEmail  size={iconSize} color={"blue"} id={classes.footerIcon}/> <div id={classes.footerText}>email@email.com</div></Link></li>
 								</ul>
 							</div>
 						</div>
@@ -22,11 +26,11 @@ export const Footer = () => {
 							<div className={classes.footer}>
 								<h3 className={classes.footerTitle}>Categories</h3>
 								<ul className={classes.footerLinks}>
-									<li><a href="#">Hot deals</a></li>
-									<li><a href="#">Laptops</a></li>
-									<li><a href="#">Smartphones</a></li>
-									<li><a href="#">Cameras</a></li>
-									<li><a href="#">Accessories</a></li>
+									<li><Link to="/category">Hot deals</Link></li>
+									<li><Link to="/category">Laptops</Link></li>
+									<li><Link to="/category">Smartphones</Link></li>
+									<li><Link to="/category">Cameras</Link></li>
+									<li><Link to="/category">Accessories</Link></li>
 								</ul>
 							</div>
 						</div>
@@ -35,11 +39,11 @@ export const Footer = () => {
 							<div className={classes.footer}>
 								<h3 className={classes.footerTitle}>Information</h3>
 								<ul className={classes.footerLinks}>
-									<li><a href="#">About Us</a></li>
-									<li><a href="#">Contact Us</a></li>
-									<li><a href="#">Privacy Policy</a></li>
-									<li><a href="#">Orders and Returns</a></li>
-									<li><a href="#">Terms & Conditions</a></li>
+									<li><Link to="/aboutUs">About Us</Link></li>
+									<li><Link to="/aboutUs">Contact Us</Link></li>
+									<li><Link to="/privacyPolicy">Privacy Policy</Link></li>
+									<li><Link to="/aboutUs">Orders and Returns</Link></li>
+									<li><Link to="/privacyPolicy">Terms & Conditions</Link></li>
 								</ul>
 							</div>
 						</div>
@@ -48,11 +52,11 @@ export const Footer = () => {
 							<div className={classes.footer}>
 								<h3 className={classes.footerTitle}>Service</h3>
 								<ul className={classes.footerLinks}>
-									<li><a href="#">My Account</a></li>
-									<li><a href="#">View Cart</a></li>
-									<li><a href="#">Wishlist</a></li>
-									<li><a href="#">Track My Order</a></li>
-									<li><a href="#">Help</a></li>
+									<li><Link to="/myProfile">My Account</Link></li>
+									<li><Link to="/myCart">View Cart</Link></li>
+									<li><Link to="/myWishList">Wishlist</Link></li>
+									<li><Link to="/trackMyOrder">Track My Order</Link></li>
+									<li><Link to="/help">Help</Link></li>
 								</ul>
 							</div>
 						</div>

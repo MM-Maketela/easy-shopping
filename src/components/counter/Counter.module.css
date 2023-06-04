@@ -1,0 +1,21 @@
+.container{
+    display: grid;
+    grid-auto-flow: column;
+    height: 100%;
+
+}
+.counterElement{
+    width: 2em;
+    text-align: center;
+    border: 1px solid rgba(24, 27, 41, 0.3);
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: .5em;
+    cursor: pointer;
+    margin-left: 1px;
+}
+.counterElement:hover{
+    background-color: rgba(24, 27, 41, 0.1);
+    
+}

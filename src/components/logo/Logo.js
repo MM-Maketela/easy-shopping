@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
  export const  Logo = () => {
   return (
     <div className="header-logo">
-	    <a  href="#" className="logo" >
+	    <Link  to="/" className="logo" >
 				
 		    <img src={LogoImg} alt=""/>
-		</a>
+		</Link>
 	</div>
   );
 }

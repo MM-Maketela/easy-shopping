@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classes from './CollectionCard.module.css'
 import {BsArrowRightCircle} from 'react-icons/bs/index.esm'
+import { Link } from 'react-router-dom'
 
 const CollectionCard = props => {
   return (
@@ -18,7 +19,7 @@ const CollectionCard = props => {
                 <div className={classes.btnAndTitle}>
                 <h3 id={classes.title}> {props.title}</h3>
                       <div className={classes.showBtn}>
-                        <button ><div id={classes.shopNowText}>Shop now</div><BsArrowRightCircle size={15} id={classes.arrow}/></button>
+                        <Link  to="/easy-shopping/category"  id={classes.Btn}> <div id={classes.shopNowText}>Shop now</div><BsArrowRightCircle size={15} id={classes.arrow}/></Link>
                         </div>
                 </div>
 

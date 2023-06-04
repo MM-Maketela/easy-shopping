@@ -1,6 +1,7 @@
 #store{
     display: grid;
     gap: 1em;
+    min-height: 100vh;
 }
 #store>*{
 }
@@ -25,6 +26,7 @@
     display: flex;
     justify-content: space-between;
     
+    
 }
 .row1InnerHeader>*{
     height: fit-content;
@@ -43,7 +45,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: auto 35% auto;
-    background-color: rgba(24, 27, 41, 0.03);
+    background-color: rgba(128, 128, 128, 0.1);
     position: relative;
     margin-top: 2em;
     
@@ -77,44 +79,13 @@
     justify-content: space-between;
     margin-top: 3em;
 }
-.newsLetterContainer{
-    margin-block: 3em;
-    border-top: 2px solid rgb(24, 27, 41,.3);
-    padding-block: 1.5em;
-    
-}
-.newsLetter{
-    width: fit-content;
-    margin-inline: auto;
-}
-.newsLetter>p{
-    width: fit-content;
-    margin-inline: auto;
-    color: #181b29;
-}
-.socialMediaFollow{
-    list-style: none;
-    display: grid;
-    grid-auto-flow: column;
-    width: fit-content;
-    margin-inline: auto;
-    gap: 1em;
-    padding: 0px;
-    margin: 0px;
-    margin-inline: auto;
-    margin-block: 1em;
-}
 
 
-#smIconId{
-    color: rgba(24, 27, 41, 0.8);
-}
-#smIconId:hover{
-    color: red;
-}
+
 
 .title{
     color: #181b29;
+    margin-block: auto;
 }
 .row1header{
     padding-top: 1em;
@@ -161,56 +132,5 @@
     color: lightblue;
     
 }
-.userInput{
-    height: 3em;
-    width: 30em;
-    border-width: 0px;
-    border-right-width:2px;
-    border-radius: 25px 0px 0px 25px;
-    border: 2px solid blue;
-    
-    
-}
-.submitBtn>div{
-    height: fit-content;
-    width: fit-content;
-    color: white;
-    font-weight: bolder;
-    font-size: 15px;
-    display: grid;
-    grid-auto-flow: column;
-    gap: .5em;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    
-}
-.submitBtn{
-    height: 3em;
-    background-color: blue;
-    border-radius: 0px 25px  25px 0px;
-    width: 10em;
-    border-width: 0px;
-    position: relative;
-    padding-inline: 1em;
-}
-.form{
-    display: grid;
-    grid-auto-flow: column;
-    height: fit-content;
-    width: fit-content;
-}
-.submitBtnCtn{
-    height: fit-content;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-.socialMediaFollow>li{
-    text-decoration: none;
-    padding: .7em;
-    border: 1px solid rgba(24, 27, 41, 0.5);
-}
-.socialMediaFollow>li:hover{
-    background-color: rgba(128, 128, 128, 0.2);
-}
+
+

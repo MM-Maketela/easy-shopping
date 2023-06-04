@@ -1,0 +1,164 @@
+#ul{
+    list-style: none !important;
+    display: flex;
+}
+#a{
+    text-decoration: none !important;
+    outline: none;
+    text-align: center;
+}
+
+.images{
+    display: flex;
+    gap: 1em;
+}
+.productPreview > img{
+    width: 150px;
+    height: 150px;
+}
+.gridDisplay{
+    display: flex;
+    width: 85%;
+    margin-inline: auto;
+    justify-content: space-between;
+    gap: 1em;
+    margin-top: 3em;
+    color: rgba(24, 27, 41,1);
+    
+}
+#productMainImage>img{
+    width: 500px;
+}
+#productMainImage{
+}
+.productDetails > *{
+    margin: 0px !important;
+    padding: 0px !important;
+    height: fit-content;
+}
+.productDetails{
+    display: grid;
+    height: fit-content;
+    gap: 1em;
+    width: 100%;
+}
+.inputAndSignsContainer{
+    display: grid;
+    grid-auto-flow: column;
+    width: fit-content;
+}
+#signs{
+    display: grid;
+    text-align: center;
+   
+
+}
+.productOptions{
+    display: flex;
+    gap: .5em;
+}
+
+#signs>div>div{
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid rgba(24, 27, 41, 0.7);
+ 
+    padding-inline: 2px;
+}
+#signs>div>div>*{
+    height: .7em;
+}
+#signs>div>div:hover{
+    cursor: pointer;
+    background-color: rgba(24, 27, 41);
+    color: white;
+}
+.inputNumber > input{
+    width: 5em;
+  height: 2.7em;
+}
+.inputSelect{
+    width: 6em;
+    height: 2.6em;
+    border: none;
+    background-color: white;
+    border: 1px solid  rgba(24, 27, 41, 0.5);
+    margin-left: 4px;
+}
+.qtyLabel{
+    display: grid;
+    grid-auto-flow: column;
+    width: fit-content;
+    gap: 6px;
+}
+.addToCart{
+    display: flex;
+    gap: 1em;
+}
+.addToCartBtn{
+    display: grid;
+    grid-auto-flow: column;
+    border: none;
+    background-color: rgba(0, 0, 255, 0.9);
+    color: white;
+    border-radius: 25px;
+    padding-inline: 25px;
+    font-weight: bold;
+    gap: .5em;
+}
+.addToCartBtn>*{
+    height: fit-content;
+    margin-block: auto;
+
+}
+#addTocart{
+
+}
+#qtyText{
+    height: fit-content;
+    margin-block: auto;
+}
+.productLinks , .inStockAndPriceContainer{
+    display: flex;
+    gap: .5em;
+  
+}
+.inStockAndPriceContainer>*{
+    height: fit-content;
+    margin-block: auto;
+}
+.hearIcon{
+    margin-top: 4px;
+}
+#listElementLnk{
+    display: grid;
+    grid-auto-flow: column;
+    gap: .5em;
+    text-decoration: none !important;
+    outline: none;
+    text-align: center;
+}
+#listElementLnk>*{
+ height: fit-content;
+ margin-block: auto;
+}
+.productPrice, .productOldPrice{
+    color: rgba(255, 0, 0, 0.9);
+}
+.productRatingContainer{
+    display: flex;
+    gap: 1em;
+}
+.productSubjectLine{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+.productInfo{
+    width: 85%;
+    margin-inline: auto;
+    text-align: start;
+    border: 1px solid rgba(24, 27, 41, 0.1);
+    padding-inline: 2em;
+    margin-top: 1em;
+}
