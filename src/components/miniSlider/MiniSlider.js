@@ -34,7 +34,8 @@ const MiniSlider = props => {
 
 
     <Carousel responsive={responsive} 
-      //  infinite={true}
+       infinite={true}
+       autoPlay
     >
       <div className={classes.miniSlider}>
         {

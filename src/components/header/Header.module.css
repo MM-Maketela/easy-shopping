@@ -1,5 +1,5 @@
 
-/* primari color #181b29 */
+/* primary color #181b29 */
 /* secondary color #54595f */
 #listItem{
     color: inherit;
@@ -89,7 +89,8 @@ header{
     
 }
 
-#cart, .cartMessage, #wishlistIcon{
+
+#cart, .cartMessage, #wishlistIconContainer{
     margin-inline:auto;
     width: fit-content;
     position: relative;
@@ -102,7 +103,6 @@ header{
     height: 20px;
     border-radius: 9px 9px 9px 9px;
     background-color: rgba(255, 0, 0, 0.9);
-   
     font-size: 11px;
     font-weight: bold;
     
@@ -136,8 +136,10 @@ header{
     color: black;
 }
 
-#cart{
+#cart, #wishlistIconContainer{
    position: relative;
+   padding-right: 8px;
+   padding-top: 4px;
 }
 
 .cartClosed, .cartOpen{
@@ -156,4 +158,20 @@ header{
     opacity: 1;
     pointer-events: auto;
    
+}
+#itemCounter,#cartItemCounter{
+    position: absolute;
+    background-color: red;
+    font-size: 11px;
+    top: 0px;
+    right: 0px;
+    padding: 1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+#whishListIcon{
+    cursor: pointer;
 }

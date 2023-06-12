@@ -8,9 +8,11 @@ import {AiOutlineShoppingCart,AiOutlineHeart} from 'react-icons/ai/index.esm'
 import {Navigation} from '../navigation/Navigation'
 import { Cart } from '../cart/Cart'
 const iconSize = 25;
-export const Header = () => {
+export const Header = (props) => {
 
 	const [cartIsOpen, setCartIsOpen] = useState(false);
+	const {numberOfItems}= props.functionality
+	let numberOfWishListItems = 0;
   return (
     <header>
 			<div id={classes.topHeader}>
@@ -51,9 +53,10 @@ export const Header = () => {
 						<div className={classes.headerCartWishlistCtnContainer}>
 							<div className={classes.headerCartWishlistCtn}>
 								<div className={classes.wishListContainer}>
-									
-										<div id={classes.wishlistIcon}>
-											<AiOutlineHeart size={iconSize}/>
+
+										<div id={classes.wishlistIconContainer}>
+										<AiOutlineHeart size={iconSize}   id={classes.whishListIcon}/>
+										{numberOfWishListItems >0 ? <div id={classes.itemCounter}>0</div>:<div></div>}
 										</div>
 										<div className={classes.wishListMessage}>Your Wishlist</div>
 										
@@ -62,8 +65,12 @@ export const Header = () => {
 
 								<div className={classes.cartContainer}>
 										<div  id={classes.cart}>
-											<AiOutlineShoppingCart size={iconSize} onClick={()=>{ setCartIsOpen(!cartIsOpen)}} id={ classes.cartIconId}/>
-											<div className={ cartIsOpen ? classes.cartOpen: classes.cartClosed}><Cart/></div>
+											<AiOutlineShoppingCart size={iconSize} onClick={()=>{ setCartIsOpen(!cartIsOpen)}} id={ classes.cartIconId}
+											/>
+											<div className={ cartIsOpen ? classes.cartOpen: classes.cartClosed}><Cart products = {props.products} functionality={props.functionality} total={props.total} 
+											/></div>
+											{ numberOfItems>0 ? <div id={classes.cartItemCounter}>{numberOfItems}</div>:<div></div>}
+											 
 										</div>
 										<div className={classes.cartMessage}>Your Cart
 							

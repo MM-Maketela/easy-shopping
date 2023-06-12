@@ -31,7 +31,8 @@ const Slider = (props) => {
     };
   return (
         <Carousel responsive={responsive}
-        // infinite={true}
+        infinite={true}
+        
         >
           {products()}
       </Carousel>

@@ -23,7 +23,7 @@ import { SectionNav } from '../../components/sectionNav/SectionNav'
 import {BsArrowRightCircle} from 'react-icons/bs/index.esm'
 import {FaFacebookF} from 'react-icons/fa/index.esm'
 
-export const Store = () => {
+export const Store = (props) => {
 
 
 
@@ -60,45 +60,65 @@ export const Store = () => {
 									<div className={classes.productSlider} data-nav="#slick-nav-1">
 										
 										<Slider list = {[<MacroProduct  {...{ 
+											id:1,
 											image: product1,
 										 	newPrice:"300",
-										  	name:"item",
+										  	name:"test1test2333",
 										   	discount:"23",
 										    classification :"new",
 											category:"test",
-											oldPrice :"250"}} />
+											oldPrice :"250",
+											products: props.products,
+											functionality:props.functionality
+										}} />
 											, <MacroProduct  {...{ 
+												id:2,
 												image: product2,
 												 newPrice:"300",
-												  name:"item",
+												  name:"item2",
 												   discount:"23",
 												classification :"new",
 												category:"test",
-												oldPrice :"250"}} />
+												oldPrice :"250",
+												products: props.products,
+												functionality:props.functionality
+											}} />
 											,<MacroProduct  {...{ 
+												id:3,
 												image: product3,
 													newPrice:"300",
-													name:"item",
+													name:"item3",
 													discount:"23",
 												classification :"new",
 												category:"test",
-												oldPrice :"250"}} />
+												oldPrice :"250",
+												products: props.products,
+												functionality:props.functionality
+											}} />
 											,<MacroProduct  {...{ 
+												id:4,
 												image: product4,
 													newPrice:"300",
-													name:"item",
+													name:"item4",
 													discount:"23",
 												classification :"new",
 												category:"test",
-												oldPrice :"250"}} />
+												oldPrice :"250",
+												products: props.products,
+												functionality:props.functionality
+											}} />
 											,<MacroProduct  {...{ 
+												id:5,
 												image: product5,
 													newPrice:"300",
-													name:"item",
+													name:"item5",
 													discount:"23",
 												classification :"new",
 												category:"test",
-												oldPrice :"250"}} />] }/>
+												oldPrice :"250",
+												products: props.products,
+												functionality:props.functionality
+												}} />] }/>
 
 
 									</div>
@@ -174,45 +194,60 @@ export const Store = () => {
 							<div className="products-tabs">
 								<div id="tab2" className="tab-pane fade in active">
 								<Slider list = {[<MacroProduct  {...{ 
+											id:6,
 											image: product1,
 										 	newPrice:"300",
-										  	name:"item",
+										  	name:"item6",
 										   	discount:"23",
 										    classification :"new",
 											category:"test",
-											oldPrice :"250"}} />
+											oldPrice :"250",
+											products: props.products,
+										functionality:props.functionality}} />
 											, <MacroProduct  {...{ 
+												id:7,
 												image: product2,
 												 newPrice:"300",
-												  name:"item",
+												  name:"item7",
 												   discount:"23",
 												classification :"new",
 												category:"test",
-												oldPrice :"250"}} />
+												oldPrice :"250",
+												products: props.products,
+												functionality:props.functionality}} />
 											,<MacroProduct  {...{ 
+												id:8,
 												image: product3,
 													newPrice:"300",
-													name:"item",
+													name:"item8",
 													discount:"23",
 												classification :"new",
 												category:"test",
-												oldPrice :"250"}} />
+												oldPrice :"250",
+												products: props.products,
+												functionality:props.functionality}} />
 											,<MacroProduct  {...{ 
+												id:9,
 												image: product4,
 													newPrice:"300",
-													name:"item",
+													name:"item9",
 													discount:"23",
 												classification :"new",
 												category:"test",
-												oldPrice :"250"}} />
+												oldPrice :"250",
+												products: props.products,
+												functionality:props.functionality}} />
 											,<MacroProduct  {...{ 
+												id:10,
 												image: product5,
 													newPrice:"300",
-													name:"item",
+													name:"item10",
 													discount:"23",
 												classification :"new",
 												category:"test",
-												oldPrice :"250"}} />] }/>
+												oldPrice :"250",
+												products: props.products,
+												functionality:props.functionality}} />] }/>
 									<div id="slick-nav-2" className="products-slick-nav"></div>
 								</div>
 							</div>
@@ -224,15 +259,15 @@ export const Store = () => {
 
 	
 		<div className={classes.section}>
-			<div className="container">
+			<div >
 				<div  className={classes.gridTopSellingProducts}>
 
 
 					{/* column1 starts here */}
-					<div className="col-md-4 col-xs-6">
-						<div className="section-title">
+					<div >
+						
 							<h4 className={classes.title}>Top selling</h4>
-						</div>
+						
 
 						<div className={classes.column1}>
 							<MiniSlider    list = {[
@@ -266,13 +301,10 @@ export const Store = () => {
 					</div>
 					
 					{/* column2 starts here  */}
-					<div className="col-md-4 col-xs-6">
-						<div className="section-title">
-							<h4 className="title">Top selling</h4>
-							<div className="section-nav">
-								<div id="slick-nav-4" className="products-slick-nav"></div>
-							</div>
-						</div>
+					<div>
+						
+							<h4 className={classes.title}>Top selling</h4>
+						
 
 						<div className={classes.column2}>
 							
@@ -310,10 +342,9 @@ export const Store = () => {
 				
 								  {/* column3 starts */}
 					<div>
-						<div >
-							<h4>Top selling</h4>
-						</div>
-
+						
+							<h4 className={classes.title}>Top selling</h4>
+						
 						<div className={classes.column3}>
 						<MiniSlider    list = {[
 							<MiniProduct  {...{
@@ -348,7 +379,7 @@ export const Store = () => {
 				</div>
 			</div>
 		</div>
-
+	
     </div>
   )
 }

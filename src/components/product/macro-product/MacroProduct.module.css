@@ -2,26 +2,25 @@
 /* secondary color #54595f */
 .product{
     text-align: center;
-    border: 1px solid rgba(128, 128, 128, 0.5);
+    border: 1px solid rgba(128, 128, 128, 0.3);
     height: fit-content;
     width: 250px;
     overflow: hidden;
+    margin-inline: auto;
     
-}
-button, h1, h2, h3, h4{
-    margin: 0px;
-    padding: 0px;
 }
 .productImgContainer{
     position: relative;
 }
 .productImgContainer>img{
     width: 250px;
-    height: 250px;
+    height: 210px;
     background-color: rgba(128, 128, 128, 0.1);
     
 }
-
+.productBody{
+    padding: .1rem;
+}
 .prices{
     display: grid;
     grid-auto-flow: column;
@@ -36,6 +35,9 @@ button, h1, h2, h3, h4{
     margin: 0px;
     padding: 0px;
 
+}
+.productNewPrice{
+    color: red;
 }
 .productOldPrice{
     color: rgba(24, 27, 41, 0.7);
@@ -53,19 +55,11 @@ button, h1, h2, h3, h4{
    
 }
 .addToCartBtnCnt{
+    background-color: red;
     
 }
-.addToCartBtn{
-    width: 100%;
-    text-align: center;
-    font-size: 15px;
-    background: #181b29;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bolder;
 
-}
+
 
 .discount,.classification{
     background-color: red;
@@ -95,23 +89,39 @@ button, h1, h2, h3, h4{
 }
 #productName{
     margin-bottom: .5em;
+    
+    
 }
 .addToWishListAndQuickViewText{
     padding: 0px;
     margin: 0px;
 }
+.addToCartBtn{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    background: #181b29;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+    font-weight: bolder;
+    border: 2px solid rgba(24, 27, 41);
+}
 .addToWishList , .quickViewBtn{
-    background-color: rgba(0, 0, 255, 0.7);
+    background-color: rgba(0, 0, 255,1);
     color: white;
     cursor: pointer;
     font-weight: bolder;
+    border: 2px solid rgba(0, 0, 255,1);
 }
 .addToWishList:hover , .quickViewBtn:hover{
-    background-color: #FC2947;
+    background-color: white;
+    color: blue;
     
 }
 .addToCartBtn:hover{
-    background-color: #FC2947;
+    background-color: white;
+    color: #181b29;
    
 }
 .productRatingCtn{

@@ -6,7 +6,7 @@ import {AiOutlinePlus,AiOutlineMinus,AiOutlineShoppingCart,AiOutlineHeart} from 
 export const ProductDisplay = () => {
 	const signSize = 13;
   return (
-    <div className="section">
+    <div id={classes.productDisplay}>
 			{/* <!-- container --> */}
 			<div className="container">
 				{/* <!-- row --> */}

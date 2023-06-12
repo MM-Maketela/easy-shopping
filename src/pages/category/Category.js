@@ -10,79 +10,108 @@ import product5 from '../../assets/images/product05.png'
 import {CgMenuGridR} from 'react-icons/cg/index.esm'
 import {TfiMenuAlt} from 'react-icons/tfi/index.esm'
 import { Counter } from '../../components/counter/Counter'
-export const Category = () => {
+export const Category = (props) => {
+  
   const productList = [<MacroProduct  {...{ 
+    id:11,
     image: product1,
      newPrice:"300",
       name:"item",
        discount:"23",
       classification :"new",
     category:"test",
-    oldPrice :"250"}} />
+    oldPrice :"250",
+    products: props.products,
+  functionality:props.functionality}} />
     ,<MacroProduct  {...{ 
+      id:12,
       image: product5,
         newPrice:"300",
         name:"item",
         discount:"23",
       classification :"new",
       category:"test",
-      oldPrice :"250"}} />
+      oldPrice :"250",
+      products: props.products,
+      functionality:props.functionality
+    }} />
     , <MacroProduct  {...{ 
+      id:13,
       image: product2,
        newPrice:"300",
         name:"item",
          discount:"23",
       classification :"new",
       category:"test",
-      oldPrice :"250"}} />
+      oldPrice :"250",
+      products: props.products,
+      functionality:props.functionality}} />
       ,<MacroProduct  {...{ 
+        id:14,
         image: product5,
           newPrice:"300",
           name:"item",
           discount:"23",
         classification :"new",
         category:"test",
-        oldPrice :"250"}} />
+        oldPrice :"250",
+        products: props.products,
+        functionality:props.functionality}} />
         ,<MacroProduct  {...{ 
+          id:15,
           image: product5,
             newPrice:"300",
             name:"item",
             discount:"23",
           classification :"new",
           category:"test",
-          oldPrice :"250"}} />
+          oldPrice :"250",
+          products: props.products,
+          functionality:props.functionality}} />
     ,<MacroProduct  {...{ 
+      id:16,
       image: product3,
         newPrice:"300",
         name:"item",
         discount:"23",
       classification :"new",
       category:"test",
-      oldPrice :"250"}} />
+      oldPrice :"250",
+      products: props.products,
+    functionality:props.functionality}} />
       ,<MacroProduct  {...{ 
+        id:17,
         image: product5,
           newPrice:"300",
           name:"item",
           discount:"23",
         classification :"new",
         category:"test",
-        oldPrice :"250"}} />
+        oldPrice :"250",
+        products: props.products,
+      functionality:props.functionality}} />
     ,<MacroProduct  {...{ 
+      id:18,
       image: product4,
         newPrice:"300",
         name:"item",
         discount:"23",
       classification :"new",
       category:"test",
-      oldPrice :"250"}} />
+      oldPrice :"250",
+      products: props.products,
+      functionality:props.functionality}} />
     ,<MacroProduct  {...{ 
+      id:19,
       image: product5,
         newPrice:"300",
         name:"item",
         discount:"23",
       classification :"new",
       category:"test",
-      oldPrice :"250"}} />]
+      oldPrice :"250",
+      products: props.products,
+      functionality:props.functionality}} />]
       const iconSize = 20;
   const products =() => {
     return productList.map((product,index) =>(<div key={index}>{product}
