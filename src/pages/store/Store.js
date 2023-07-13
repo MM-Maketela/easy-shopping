@@ -141,25 +141,25 @@ export const Store = (props) => {
 					<div className="col-md-12">
 						<div className={classes.hotDeal}>
 							<ul className={classes.hotDealCountDown}>
-								<li id={classes.countDownElement}>
+								<li className={classes.countDownElement}>
 									<div>
 										<h3>02</h3>
 										<span>Days</span>
 									</div>
 								</li>
-								<li id={classes.countDownElement}>
+								<li className={classes.countDownElement}>
 									<div>
 										<h3>10</h3>
 										<span>Hours</span>
 									</div>
 								</li>
-								<li id={classes.countDownElement}>
+								<li className={classes.countDownElement}>
 									<div>
 										<h3>34</h3>
 										<span>Mins</span>
 									</div>
 								</li>
-								<li id={classes.countDownElement}>
+								<li className={classes.countDownElement}>
 									<div>
 										<h3>60</h3>
 										<span>Secs</span>
