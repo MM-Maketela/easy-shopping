@@ -9,15 +9,14 @@ input[type="number"] {
     
   }
 #category{
-    width: 85%;
+    width: 95%;
     margin-inline: auto;
     display: grid;
-    grid-template-columns:25% 75%;
+    grid-template-columns:20% 70%;
     gap:2em;
     padding-top:2em;
     min-height: 100vh;
-    max-width: 1400px;
-    margin-inline: auto;
+    margin-inline: auto;   
 
 }
 

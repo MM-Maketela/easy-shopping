@@ -10,13 +10,14 @@ const MacroProduct = (props) => {
     const {image, newPrice, name, discount, classification,category,oldPrice,products,id,functionality}=props; 
     const {addProduct,removeProduct,increment, decrement,countItems, subtotal} = functionality
     const path = '/easy-shopping/productDisplay/'+id
+    let _src = "data:image/*;base64,"+image
     const productRating =()=>{
         return <div>4.5</div>
     }
   return (
     <div className={classes.product}>
         <div className={classes.productImgContainer}>
-            <img src={image} alt=""/>
+            <img src={_src}     alt=""/>
             <div className={classes.discount}>-{discount}%</div>
 
             <div className={classes.productDesc}>

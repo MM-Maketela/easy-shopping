@@ -1,4 +1,5 @@
 import React from 'react'
+import {useEffect, useState} from 'react'
 import shop03 from '../../assets/images/shop03.png'
 import shop02 from '../../assets/images/shop02.png'
 import shop01 from '../../assets/images/shop01.png'
@@ -24,8 +25,26 @@ import {BsArrowRightCircle} from 'react-icons/bs/index.esm'
 import {FaFacebookF} from 'react-icons/fa/index.esm'
 
 export const Store = (props) => {
+	let [data, setData] = useState(null)
 
+	async function handleProducts(){
+		try{
+		   await fetch("http://localhost:3003/client/products")
+		  .then(res => res.json())
+		  .then(data => setData(data))
+		}catch(e){
+		  console.log(e)
+		}
+	   }
+	  
+		// handing products
+		useEffect(()=>{
+		  handleProducts()
+		},[])
 
+		if(data){
+			console.log(data['data'])
+		}
 
   return (
     <div id={classes.store} >
@@ -59,66 +78,68 @@ export const Store = (props) => {
 								<div id="tab1" className="tab-pane active">
 									<div className={classes.productSlider} data-nav="#slick-nav-1">
 										
-										<Slider list = {[<MacroProduct  {...{ 
-											id:1,
-											image: product1,
-										 	newPrice:"300",
-										  	name:"test1test2333",
-										   	discount:"23",
-										    classification :"new",
-											category:"test",
-											oldPrice :"250",
+
+									{data===null ? <h1>loading</h1>: <Slider list = {[<MacroProduct  {...{ 
+											id:data['data'][0].id,
+											image: data['data'][0].image1,
+										 	newPrice:data['data'][0].price,
+										  	name:data['data'][0].productName,
+										   	discount:data['data'][0].discount,
+										    classification :data['data'][0].new,
+											category:data['data'][0].category,
+											oldPrice :"100",
 											products: props.products,
 											functionality:props.functionality
 										}} />
 											, <MacroProduct  {...{ 
-												id:2,
-												image: product2,
-												 newPrice:"300",
-												  name:"item2",
-												   discount:"23",
-												classification :"new",
-												category:"test",
-												oldPrice :"250",
-												products: props.products,
-												functionality:props.functionality
+												id:data['data'][1].id,
+											image: data['data'][1].image1,
+										 	newPrice:data['data'][1].price,
+										  	name:data['data'][1].productName,
+										   	discount:data['data'][1].discount,
+										    classification :data['data'][1].new,
+											category:data['data'][1].category,
+											oldPrice :"100",
+											products: props.products,
+											functionality:props.functionality
 											}} />
 											,<MacroProduct  {...{ 
-												id:3,
-												image: product3,
-													newPrice:"300",
-													name:"item3",
-													discount:"23",
-												classification :"new",
-												category:"test",
-												oldPrice :"250",
-												products: props.products,
-												functionality:props.functionality
+												id:data['data'][2].id,
+											image: data['data'][2].image1,
+										 	newPrice:data['data'][2].price,
+										  	name:data['data'][2].productName,
+										   	discount:data['data'][2].discount,
+										    classification :data['data'][2].new,
+											category:data['data'][2].category,
+											oldPrice :"100",
+											products: props.products,
+											functionality:props.functionality
 											}} />
 											,<MacroProduct  {...{ 
-												id:4,
-												image: product4,
-													newPrice:"300",
-													name:"item4",
-													discount:"23",
-												classification :"new",
-												category:"test",
-												oldPrice :"250",
-												products: props.products,
-												functionality:props.functionality
+												id:data['data'][3].id,
+											image: data['data'][3].image1,
+										 	newPrice:data['data'][3].price,
+										  	name:data['data'][3].productName,
+										   	discount:data['data'][3].discount,
+										    classification :data['data'][3].new,
+											category:data['data'][3].category,
+											oldPrice :"100",
+											products: props.products,
+											functionality:props.functionality
 											}} />
 											,<MacroProduct  {...{ 
-												id:5,
-												image: product5,
-													newPrice:"300",
-													name:"item5",
-													discount:"23",
-												classification :"new",
-												category:"test",
-												oldPrice :"250",
-												products: props.products,
-												functionality:props.functionality
-												}} />] }/>
+												id:data['data'][4].id,
+											image: data['data'][4].image1,
+										 	newPrice:data['data'][4].price,
+										  	name:data['data'][4].productName,
+										   	discount:data['data'][4].discount,
+										    classification :data['data'][4].new,
+											category:data['data'][4].category,
+											oldPrice :"100",
+											products: props.products,
+											functionality:props.functionality
+												}} />] }/>}
+										
 
 
 									</div>
@@ -193,61 +214,64 @@ export const Store = (props) => {
 						<div className="row">
 							<div className="products-tabs">
 								<div id="tab2" className="tab-pane fade in active">
-								<Slider list = {[<MacroProduct  {...{ 
-											id:6,
-											image: product1,
-										 	newPrice:"300",
-										  	name:"item6",
-										   	discount:"23",
-										    classification :"new",
-											category:"test",
-											oldPrice :"250",
-											products: props.products,
+								{
+
+									data===null ? <h1>loading...</h1> : <Slider list = {[<MacroProduct  {...{ 
+										id:data['data'][5].id,
+										image: data['data'][5].image1,
+										 newPrice:data['data'][5].price,
+										  name:data['data'][5].productName,
+										   discount:data['data'][5].discount,
+										classification :data['data'][5].new,
+										category:data['data'][5].category,
+										oldPrice :"100",
+										products: props.products,
 										functionality:props.functionality}} />
-											, <MacroProduct  {...{ 
-												id:7,
-												image: product2,
-												 newPrice:"300",
-												  name:"item7",
-												   discount:"23",
-												classification :"new",
-												category:"test",
-												oldPrice :"250",
-												products: props.products,
-												functionality:props.functionality}} />
-											,<MacroProduct  {...{ 
-												id:8,
-												image: product3,
-													newPrice:"300",
-													name:"item8",
-													discount:"23",
-												classification :"new",
-												category:"test",
-												oldPrice :"250",
-												products: props.products,
-												functionality:props.functionality}} />
-											,<MacroProduct  {...{ 
-												id:9,
-												image: product4,
-													newPrice:"300",
-													name:"item9",
-													discount:"23",
-												classification :"new",
-												category:"test",
-												oldPrice :"250",
-												products: props.products,
-												functionality:props.functionality}} />
-											,<MacroProduct  {...{ 
-												id:10,
-												image: product5,
-													newPrice:"300",
-													name:"item10",
-													discount:"23",
-												classification :"new",
-												category:"test",
-												oldPrice :"250",
-												products: props.products,
-												functionality:props.functionality}} />] }/>
+										, <MacroProduct  {...{ 
+											id:data['data'][6].id,
+										image: data['data'][6].image1,
+										 newPrice:data['data'][6].price,
+										  name:data['data'][6].productName,
+										   discount:data['data'][6].discount,
+										classification :data['data'][6].new,
+										category:data['data'][6].category,
+										oldPrice :"100",
+										products: props.products,
+										functionality:props.functionality}} />
+										,<MacroProduct  {...{ 
+											id:data['data'][7].id,
+										image: data['data'][7].image1,
+										 newPrice:data['data'][7].price,
+										  name:data['data'][7].productName,
+										   discount:data['data'][7].discount,
+										classification :data['data'][7].new,
+										category:data['data'][7].category,
+										oldPrice :"100",
+										products: props.products,
+										functionality:props.functionality}} />
+										,<MacroProduct  {...{ 
+											id:data['data'][8].id,
+										image: data['data'][8].image1,
+										 newPrice:data['data'][8].price,
+										  name:data['data'][8].productName,
+										   discount:data['data'][8].discount,
+										classification :data['data'][8].new,
+										category:data['data'][8].category,
+										oldPrice :"100",
+										products: props.products,
+										functionality:props.functionality}} />
+										,<MacroProduct  {...{ 
+											id:data['data'][9].id,
+										image: data['data'][9].image1,
+										 newPrice:data['data'][9].price,
+										  name:data['data'][9].productName,
+										   discount:data['data'][9].discount,
+										classification :data['data'][9].new,
+										category:data['data'][9].category,
+										oldPrice :"100",
+										products: props.products,
+										functionality:props.functionality}} />] }/>
+								}
 									<div id="slick-nav-2" className="products-slick-nav"></div>
 								</div>
 							</div>
@@ -270,33 +294,35 @@ export const Store = (props) => {
 						
 
 						<div className={classes.column1}>
-							<MiniSlider    list = {[
-							<MiniProduct  {...{
-								image:product5,
-								 name:"small item",
-								 oldPrice:"300",
-								  newPrice:"200",
-								  category:"category"}}/>,
-								  <MiniProduct  {...{
-									image:product5,
-									 name:"small item",
-									 oldPrice:"300",
-									  newPrice:"200",
-									  category:"category"}}/>,
-								<MiniProduct  {...{
-								image:product5,
-									name:"small item",
-									oldPrice:"300",
-									newPrice:"200",
-									category:"category"}}/>,
-								<MiniProduct  {...{
-									image:product5,
-									name:"small item",
-									oldPrice:"300",
-									newPrice:"200",
-									category:"category"}}/>
-								  
-								  ] }/>
+							{
+								data===null ? <h1>loading...</h1>: <MiniSlider    list = {[
+									<MiniProduct  {...{
+										image:data['data'][0].image2,
+										 name:data['data'][0].productName,
+										 oldPrice:"10",
+										  newPrice:data['data'][0].price,
+										  category:data['data'][0].category}}/>,
+										  <MiniProduct  {...{
+											image:data['data'][1].image2,
+										 name:data['data'][1].productName,
+										 oldPrice:"10",
+										  newPrice:data['data'][1].price,
+										  category:data['data'][1].category}}/>,
+										<MiniProduct  {...{
+											image:data['data'][2].image2,
+											name:data['data'][2].productName,
+											oldPrice:"10",
+											 newPrice:data['data'][2].price,
+											 category:data['data'][2].category}}/>,
+										<MiniProduct  {...{
+											image:data['data'][3].image2,
+										 name:data['data'][3].productName,
+										 oldPrice:"10",
+										  newPrice:data['data'][3].price,
+										  category:data['data'][3].category}}/>
+										  
+										  ] }/>
+							}
 						</div>
 					</div>
 					
@@ -309,33 +335,35 @@ export const Store = (props) => {
 						<div className={classes.column2}>
 							
 
-						<MiniSlider    list = {[
-							<MiniProduct  {...{
-								image:product5,
-								 name:"small item",
-								 oldPrice:"300",
-								  newPrice:"200",
-								  category:"category"}}/>,
-								  <MiniProduct  {...{
-									image:product5,
-									 name:"small item",
-									 oldPrice:"300",
-									  newPrice:"200",
-									  category:"category"}}/>,
+						{
+							data===null ? <h1>loading ...</h1>: <MiniSlider    list = {[
 								<MiniProduct  {...{
-								image:product5,
-									name:"small item",
-									oldPrice:"300",
-									newPrice:"200",
-									category:"category"}}/>,
-								<MiniProduct  {...{
-									image:product5,
-									name:"small item",
-									oldPrice:"300",
-									newPrice:"200",
-									category:"category"}}/>
-								  
-								  ] }/>
+									image:data['data'][4].image2,
+										 name:data['data'][4].productName,
+										 oldPrice:"10",
+										  newPrice:data['data'][4].price,
+										  category:data['data'][4].category}}/>,
+									  <MiniProduct  {...{
+										image:data['data'][5].image2,
+										 name:data['data'][5].productName,
+										 oldPrice:"10",
+										  newPrice:data['data'][5].price,
+										  category:data['data'][5].category}}/>,
+									<MiniProduct  {...{
+										image:data['data'][6].image2,
+										name:data['data'][6].productName,
+										oldPrice:"10",
+										 newPrice:data['data'][6].price,
+										 category:data['data'][6].category}}/>,
+									<MiniProduct  {...{
+										image:data['data'][7].image2,
+										 name:data['data'][7].productName,
+										 oldPrice:"10",
+										  newPrice:data['data'][7].price,
+										  category:data['data'][7].category}}/>
+									  
+									  ] }/>
+						}
 						</div>
 					</div>
 
@@ -346,33 +374,35 @@ export const Store = (props) => {
 							<h4 className={classes.title}>Top selling</h4>
 						
 						<div className={classes.column3}>
-						<MiniSlider    list = {[
-							<MiniProduct  {...{
-								image:product5,
-								 name:"small item",
-								 oldPrice:"300",
-								  newPrice:"200",
-								  category:"category"}}/>,
-								  <MiniProduct  {...{
-									image:product5,
-									 name:"small item",
-									 oldPrice:"300",
-									  newPrice:"200",
-									  category:"category"}}/>,
+						{
+							data === null ? <h1>loading ...</h1>: <MiniSlider    list = {[
 								<MiniProduct  {...{
-								image:product5,
-									name:"small item",
-									oldPrice:"300",
-									newPrice:"200",
-									category:"category"}}/>,
-								<MiniProduct  {...{
-									image:product5,
-									name:"small item",
-									oldPrice:"300",
-									newPrice:"200",
-									category:"category"}}/>
-								  
-								  ] }/>
+									image:data['data'][9].image2,
+										 name:data['data'][9].productName,
+										 oldPrice:"10",
+										  newPrice:data['data'][9].price,
+										  category:data['data'][9].category}}/>,
+									  <MiniProduct  {...{
+										image:data['data'][10].image2,
+										 name:data['data'][10].productName,
+										 oldPrice:"10",
+										  newPrice:data['data'][10].price,
+										  category:data['data'][10].category}}/>,
+									<MiniProduct  {...{
+										image:data['data'][11].image2,
+										name:data['data'][11].productName,
+										oldPrice:"10",
+										 newPrice:data['data'][11].price,
+										 category:data['data'][11].category}}/>,
+									<MiniProduct  {...{
+										image:data['data'][12].image2,
+										 name:data['data'][12].productName,
+										 oldPrice:"10",
+										  newPrice:data['data'][12].price,
+										  category:data['data'][12].category}}/>
+									  
+									  ] }/>
+						}
 						</div>
 					</div>
 

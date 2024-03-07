@@ -4,10 +4,11 @@ import classes from "./MiniProduct.module.css"
 import { Link } from 'react-router-dom'
 const MiniProduct = props => {
     const {image, newPrice, name,oldPrice, category}=props;
+    let _src = "data:image/*;base64,"+image
   return (
     <div id={classes.miniProduct}>
         <div className={classes.productImgContainer}>
-            <img src={image} alt=""/>
+            <img src={_src} alt=""/>
         </div>
         <div className={classes.productDesc}>
             <p className={classes.productCat}>{category}</p>

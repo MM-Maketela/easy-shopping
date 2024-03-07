@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classes from "./Cart.module.css";
+import { Link } from "react-router-dom";
 export const Cart = (props) => {
 	const { functionality } = props;
 	const {
@@ -12,7 +13,8 @@ export const Cart = (props) => {
 	} = functionality;
 	let cartItems = props.products;
 	let buttonText = numberOfItems > 0 ? "BUY PRODUCTS" : "CONTINUE SHOPPING";
-
+	const {handleCartState} = props
+	
 	return (
 		<div id={classes.cart}>
 			<h2>CARTS ITEMS ({numberOfItems})</h2>
@@ -84,7 +86,9 @@ export const Cart = (props) => {
 			) : (
 				<div></div>
 			)}
-			<button id={classes.buy}>{buttonText}</button>
+			<div id={classes.buy}><Link to={numberOfItems > 0 ? "": "/easy-shopping"} id={classes.buttonLInk} onClick={()=>{
+				handleCartState()
+			}}> {buttonText}</Link></div>
 		</div>
 	);
 };

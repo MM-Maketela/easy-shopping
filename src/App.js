@@ -22,6 +22,7 @@ function App() {
   let [listOfCartItems, handleProducts] = useState([])
   let [Total, updateSubtotal] = useState(0)
   let [numberOfItems, setNumberOfItems] = useState(0)
+  let [cartState, setCArtState] = useState(0)
 
 
   function addProduct(listOfCartItems,productToAdd){
@@ -116,6 +117,8 @@ function App() {
       {/* <Navigation activeLink={location.pathname} /> */}
       
       <Header  products={listOfCartItems} functionality={functionality} total={Total}/>
+
+      <div className='main-container'>
         <Routes>
           <Route path="/easy-shopping" element={<Store  products={listOfCartItems} functionality={functionality} total={Total}/>} />
           <Route  path="/easy-shopping/signup"   element={<Signup />} />
@@ -132,6 +135,7 @@ function App() {
           <Route  path="/easy-shopping/myWishList" element={<MyWishList/>} />
           
         </Routes>
+        </div>
       <NewsLetter/>
       <Footer/>
       <ToastContainer/>
