@@ -1,4 +1,5 @@
 import React from 'react'
+import {useEffect,useState} from 'react'
 import classes from './Category.module.css'
 import {SideBar} from '../../components/sideBar/SideBar'
 import MacroProduct from '../../components/product/macro-product/MacroProduct'
@@ -11,112 +12,47 @@ import {CgMenuGridR} from 'react-icons/cg/index.esm'
 import {TfiMenuAlt} from 'react-icons/tfi/index.esm'
 import { Counter } from '../../components/counter/Counter'
 export const Category = (props) => {
-  
-  const productList = [<MacroProduct  {...{ 
-    id:11,
-    image: product1,
-     newPrice:"300",
-      name:"item",
-       discount:"23",
-      classification :"new",
-    category:"test",
-    oldPrice :"250",
-    products: props.products,
-  functionality:props.functionality}} />
-    ,<MacroProduct  {...{ 
-      id:12,
-      image: product5,
-        newPrice:"300",
-        name:"item",
-        discount:"23",
-      classification :"new",
-      category:"test",
-      oldPrice :"250",
-      products: props.products,
-      functionality:props.functionality
-    }} />
-    , <MacroProduct  {...{ 
-      id:13,
-      image: product2,
-       newPrice:"300",
-        name:"item",
-         discount:"23",
-      classification :"new",
-      category:"test",
-      oldPrice :"250",
-      products: props.products,
-      functionality:props.functionality}} />
-      ,<MacroProduct  {...{ 
-        id:14,
-        image: product5,
-          newPrice:"300",
-          name:"item",
-          discount:"23",
-        classification :"new",
-        category:"test",
-        oldPrice :"250",
-        products: props.products,
-        functionality:props.functionality}} />
-        ,<MacroProduct  {...{ 
-          id:15,
-          image: product5,
-            newPrice:"300",
-            name:"item",
-            discount:"23",
-          classification :"new",
-          category:"test",
-          oldPrice :"250",
-          products: props.products,
-          functionality:props.functionality}} />
-    ,<MacroProduct  {...{ 
-      id:16,
-      image: product3,
-        newPrice:"300",
-        name:"item",
-        discount:"23",
-      classification :"new",
-      category:"test",
-      oldPrice :"250",
-      products: props.products,
-    functionality:props.functionality}} />
-      ,<MacroProduct  {...{ 
-        id:17,
-        image: product5,
-          newPrice:"300",
-          name:"item",
-          discount:"23",
-        classification :"new",
-        category:"test",
-        oldPrice :"250",
-        products: props.products,
-      functionality:props.functionality}} />
-    ,<MacroProduct  {...{ 
-      id:18,
-      image: product4,
-        newPrice:"300",
-        name:"item",
-        discount:"23",
-      classification :"new",
-      category:"test",
-      oldPrice :"250",
-      products: props.products,
-      functionality:props.functionality}} />
-    ,<MacroProduct  {...{ 
-      id:19,
-      image: product5,
-        newPrice:"300",
-        name:"item",
-        discount:"23",
-      classification :"new",
-      category:"test",
-      oldPrice :"250",
-      products: props.products,
-      functionality:props.functionality}} />]
-      const iconSize = 20;
-  const products =() => {
-    return productList.map((product,index) =>(<div key={index}>{product}
-      </div>))
+  let [data, setData] = useState(null)
+   //getting products
+
+ async function handleProducts(){
+  try{
+     await fetch("http://localhost:3003/client/products")
+    .then(res => res.json())
+    .then(data => setData(data))
+  }catch(e){
+    console.log(e)
+  }
+ }
+
+  // handing products
+  useEffect(()=>{
+    handleProducts()
+  },[])
+
+  function productMap(products){
+    let _products = []
+
+    //handle image
+    for(let i =0; i<products.length; i++){
+        const product = {handleProducts:handleProducts, id:products[i].id, image:products[i]['image1'], name:products[i].productName, price:products[i].price, discount:products[i].discount,  category:products[i].category, details:products[i].details, new:products[i].new, brand:'testing brand', rating:4}
+        _products.push(product)
     }
+     return _products.map((product,index)=> <div key={index} className={classes.eachProduct}>{<MacroProduct {...{ 
+      id:product.id,
+      image: product.image,
+      newPrice:product.price,
+        name:product.name,
+        discount:product.discount,
+        classification :product.new,
+      category:product.category,
+      oldPrice :"100",
+      products: props.products,
+      functionality:props.functionality}}/>}</div>)
+}
+
+      const iconSize = 20;
+
   return (
     <div className={classes.categoryContainer}>
       
@@ -148,13 +84,13 @@ export const Category = (props) => {
         </div>
         </div>
       </div>
-      <div className={classes.productsContainer}>
-        {
-        
-          products()
+
+
+      {
+        data ? <div className={classes.productsContainer}>
+        {productMap(data['data'])} </div>:<div><h1 style={{fontSize:'3rem',color:'red'}}>Loading...</h1></div>
       }
       
-      </div>
       <div className={classes.productCounter}>
         <div className={classes.numberOfProducts}>
         1-10 products

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classes from "./Cart.module.css";
 import { Link } from "react-router-dom";
 export const Cart = (props) => {
+	
 	const { functionality } = props;
 	const {
 		removeProduct,
@@ -25,7 +26,7 @@ export const Cart = (props) => {
 						<div key={product.id} id={classes.cartItemContainer}>
 							<div className={classes.productContent}>
 								<div id={classes.productImgContainer}>
-									<img src={product.image} id={classes.productImg} />
+									<img src={"data:image/*;base64,"+product.image} id={classes.productImg} />
 								</div>
 								<div className={classes.namePrice}>
 									<div id={classes.itemName}>{product.name}</div>
