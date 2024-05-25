@@ -104,9 +104,7 @@ function App() {
     <div>
       {/* navigation to be updated */}
       {/* <Navigation activeLink={location.pathname} /> */}
-
       <Header products={listOfCartItems} functionality={functionality} total={Total} />
-
       {/* <div className="main-container">
         <Routes>
           <Route path="/easy-shopping" element={<Store products={listOfCartItems} functionality={functionality} total={Total} />} />
