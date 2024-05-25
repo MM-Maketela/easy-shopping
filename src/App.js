@@ -22,12 +22,13 @@ function App() {
   let [listOfCartItems, handleProducts] = useState([]);
   let [Total, updateSubtotal] = useState(0);
   let [numberOfItems, setNumberOfItems] = useState(0);
-  let [cartState, setCArtState] = useState(0);
+  // let [cartState, setCArtState] = useState(0);
 
   function addProduct(listOfCartItems, productToAdd) {
     if (listOfCartItems.length > 0) {
       let product = listOfCartItems.find((product) => {
         if (product.id === productToAdd.id) return product;
+          return {}
       });
 
       if (product) {
@@ -54,12 +55,14 @@ function App() {
     console.log("test");
     let productToInc = items.find((product) => {
       if (product.id === productId) return product;
+      return {}
     });
 
     const updatedProduct = { id: productToInc.id, name: productToInc.name, price: Number(productToInc.price) + Number(Number(productToInc.price) / Number(productToInc.qty)), qty: productToInc.qty + 1, rating: productToInc.rating, image: productToInc.image };
 
     let filteredList = items.filter((product) => {
       if (product.id !== productId) return product;
+      return {}
     });
     handleProducts([...filteredList, updatedProduct]);
   }
@@ -67,6 +70,7 @@ function App() {
   function decrement(items, productId) {
     let productToDec = items.find((product) => {
       if (product.id === productId) return product;
+      return {}
     });
 
     if (Number(productToDec.qty) === 1) {
@@ -76,6 +80,7 @@ function App() {
     const updatedProduct = { id: productToDec.id, name: productToDec.name, price: Number(productToDec.price) - Number(Number(productToDec.price) / Number(productToDec.qty)), qty: productToDec.qty - 1, rating: productToDec.rating, image: productToDec.image };
     let filteredList = items.filter((product) => {
       if (product.id !== productId) return product;
+      return {}
     });
 
     handleProducts([...filteredList, updatedProduct]);
@@ -99,13 +104,15 @@ function App() {
     subtotal: subtotal,
   };
 
-  function sortProductsByName(cartItems) {}
+  // function sortProductsByName(cartItems) {
+
+  // }
   return (
     <div>
       {/* navigation to be updated */}
       {/* <Navigation activeLink={location.pathname} /> */}
       <Header products={listOfCartItems} functionality={functionality} total={Total} />
-      {/* <div className="main-container">
+      <div className="main-container">
         <Routes>
           <Route path="/easy-shopping" element={<Store products={listOfCartItems} functionality={functionality} total={Total} />} />
           <Route path="/easy-shopping/signup" element={<Signup />} />
@@ -121,7 +128,7 @@ function App() {
           <Route path="/easy-shopping/myCart" element={<MyCart />} />
           <Route path="/easy-shopping/myWishList" element={<MyWishList />} />
         </Routes>
-      </div> */}
+      </div>
       <NewsLetter />
       <Footer />
       <ToastContainer />
