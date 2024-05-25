@@ -120,19 +120,19 @@ function App() {
 
       <div className='main-container'>
         <Routes>
-          <Route path="/easy-shopping" element={<Store  products={listOfCartItems} functionality={functionality} total={Total}/>} />
-          <Route  path="/easy-shopping/signup"   element={<Signup />} />
-          <Route  path="/easy-shopping/login"   element={<Login/>} />
-          <Route  path="/easy-shopping/productDisplay/:id"   element={<ProductDisplay />} />
-          <Route  path="/easy-shopping/category"   element={<Category  products={listOfCartItems} functionality={functionality} total={Total}/>} />
-          <Route  path="/easy-shopping/checkout" element={<Checkout/>} />
-          <Route  path="/easy-shopping/trackMyOrder" element={<TrackMyOrder/>} />
-          <Route  path="/easy-shopping/privacyPolicy" element={<PrivacyPolicy/>} />
-          <Route  path="/easy-shopping/help" element={<Help/>} />
-          <Route  path="/easy-shopping/aboutUs" element={<AboutUs/>} />
-          <Route  path="/easy-shopping/myProfile" element={<MyProfile/>} />
-          <Route  path="/easy-shopping/myCart" element={<MyCart/>} />
-          <Route  path="/easy-shopping/myWishList" element={<MyWishList/>} />
+          <Route path="/" element={<Store  products={listOfCartItems} functionality={functionality} total={Total}/>} />
+          <Route  path="/signup"   element={<Signup />} />
+          <Route  path="/login"   element={<Login/>} />
+          <Route  path="/productDisplay/:id"   element={<ProductDisplay />} />
+          <Route  path="/category"   element={<Category  products={listOfCartItems} functionality={functionality} total={Total}/>} />
+          <Route  path="/checkout" element={<Checkout/>} />
+          <Route  path="/trackMyOrder" element={<TrackMyOrder/>} />
+          <Route  path="/privacyPolicy" element={<PrivacyPolicy/>} />
+          <Route  path="/help" element={<Help/>} />
+          <Route  path="/aboutUs" element={<AboutUs/>} />
+          <Route  path="/myProfile" element={<MyProfile/>} />
+          <Route  path="/myCart" element={<MyCart/>} />
+          <Route  path="/myWishList" element={<MyWishList/>} />
           
         </Routes>
         </div>
