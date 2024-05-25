@@ -28,7 +28,7 @@ function App() {
     if (listOfCartItems.length > 0) {
       let product = listOfCartItems.find((product) => {
         if (product.id === productToAdd.id) return product;
-          return {}
+        return {};
       });
 
       if (product) {
@@ -55,14 +55,14 @@ function App() {
     console.log("test");
     let productToInc = items.find((product) => {
       if (product.id === productId) return product;
-      return {}
+      return {};
     });
 
     const updatedProduct = { id: productToInc.id, name: productToInc.name, price: Number(productToInc.price) + Number(Number(productToInc.price) / Number(productToInc.qty)), qty: productToInc.qty + 1, rating: productToInc.rating, image: productToInc.image };
 
     let filteredList = items.filter((product) => {
       if (product.id !== productId) return product;
-      return {}
+      return {};
     });
     handleProducts([...filteredList, updatedProduct]);
   }
@@ -70,7 +70,7 @@ function App() {
   function decrement(items, productId) {
     let productToDec = items.find((product) => {
       if (product.id === productId) return product;
-      return {}
+      return {};
     });
 
     if (Number(productToDec.qty) === 1) {
@@ -80,7 +80,7 @@ function App() {
     const updatedProduct = { id: productToDec.id, name: productToDec.name, price: Number(productToDec.price) - Number(Number(productToDec.price) / Number(productToDec.qty)), qty: productToDec.qty - 1, rating: productToDec.rating, image: productToDec.image };
     let filteredList = items.filter((product) => {
       if (product.id !== productId) return product;
-      return {}
+      return {};
     });
 
     handleProducts([...filteredList, updatedProduct]);
@@ -114,19 +114,19 @@ function App() {
       <Header products={listOfCartItems} functionality={functionality} total={Total} />
       <div className="main-container">
         <Routes>
-          <Route path="/easy-shopping" element={<Store products={listOfCartItems} functionality={functionality} total={Total} />} />
-          <Route path="/easy-shopping/signup" element={<Signup />} />
-          <Route path="/easy-shopping/login" element={<Login />} />
-          <Route path="/easy-shopping/productDisplay/:id" element={<ProductDisplay />} />
-          <Route path="/easy-shopping/category" element={<Category products={listOfCartItems} functionality={functionality} total={Total} />} />
-          <Route path="/easy-shopping/checkout" element={<Checkout />} />
-          <Route path="/easy-shopping/trackMyOrder" element={<TrackMyOrder />} />
-          <Route path="/easy-shopping/privacyPolicy" element={<PrivacyPolicy />} />
-          <Route path="/easy-shopping/help" element={<Help />} />
-          <Route path="/easy-shopping/aboutUs" element={<AboutUs />} />
-          <Route path="/easy-shopping/myProfile" element={<MyProfile />} />
-          <Route path="/easy-shopping/myCart" element={<MyCart />} />
-          <Route path="/easy-shopping/myWishList" element={<MyWishList />} />
+          <Route path="/" element={<Store products={listOfCartItems} functionality={functionality} total={Total} />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/productDisplay/:id" element={<ProductDisplay />} />
+          <Route path="/category" element={<Category products={listOfCartItems} functionality={functionality} total={Total} />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/trackMyOrder" element={<TrackMyOrder />} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="/help" element={<Help />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/myProfile" element={<MyProfile />} />
+          <Route path="/myCart" element={<MyCart />} />
+          <Route path="/myWishList" element={<MyWishList />} />
         </Routes>
       </div>
       <NewsLetter />

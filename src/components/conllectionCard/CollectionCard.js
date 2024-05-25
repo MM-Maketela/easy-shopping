@@ -18,7 +18,7 @@ const CollectionCard = (props) => {
           <div className={classes.btnAndTitle}>
             <h3 id={classes.title}> {props.title}</h3>
             <div className={classes.showBtn}>
-              <Link to="/easy-shopping/category" id={classes.Btn}>
+              <Link to="/category" id={classes.Btn}>
                 {" "}
                 <div id={classes.shopNowText}>Shop now</div>
                 <BsArrowRightCircle size={15} id={classes.arrow} />
